@@ -4,6 +4,19 @@
 
 @layer base {
   :root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-blue: hsl(249, 100%, 49%);
+    --color-pink: hsl(305, 100%, 50%);
+    --color-pinkish: hsl(210 40% 96.1%);
+    --color-gradient: linear-gradient(
+      229.68deg,
+      var(--color-pink) 21.73%,
+      var(--color-blue) 86.37%
+    );
+    --color-dark-purple: hsl(265, 71%, 7%);
+    --color-body: hsl(266, 6%, 49%);
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -65,5 +78,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .gradient {
+    background: var(--color-gradient);
   }
 }

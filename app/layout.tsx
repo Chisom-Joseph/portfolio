@@ -2,15 +2,23 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+import ThemeProvider from "@/providers/ThemeProvider";
+
+import Header from "@/components/Header";
+
+const powerGroteskUltraBold = localFont({
+  src: "./fonts/PowerGrotesk-UltraBold.woff2",
+  variable: "--font-PowerGroteskUltraBold",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const figtree = localFont({
+  src: "./fonts/Figtree-VariableFont_wght.ttf",
+  variable: "--font-figtree",
+});
+
+const figtreeItalic = localFont({
+  src: "./fonts/Figtree-Italic-VariableFont_wght.ttf",
+  variable: "--font-figtreeItalic",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-figtree antialiased bg-white dark:bg-darkPurple ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

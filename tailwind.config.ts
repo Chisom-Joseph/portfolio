@@ -19,6 +19,11 @@ const config = {
     },
     extend: {
       colors: {
+        white: "var(--color-white)",
+        blue: "var(--color-blue)",
+        pink: "var(--color-pink)",
+        darkPurple: "var(--color-dark-purple)",
+        body: "var(--color-body)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -71,6 +76,11 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        figtree: ["var(--font-figtree)"],
+        figtreeItalic: ["var(--font-figtreeItalic)"],
+        powerGroteskUltraBold: ["var(--font-PowerGroteskUltraBold)"],
       },
     },
   },
