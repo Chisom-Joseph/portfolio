@@ -8,7 +8,6 @@
     --color-black: hsl(0, 0%, 0%);
     --color-blue: hsl(249, 100%, 49%);
     --color-pink: hsl(305, 100%, 50%);
-    --color-pinkish: hsl(210 40% 96.1%);
     --color-gradient: linear-gradient(
       229.68deg,
       var(--color-pink) 21.73%,
@@ -79,7 +78,14 @@
   body {
     @apply bg-background text-foreground;
   }
-  .gradient {
+  .bg-gradient {
     background: var(--color-gradient);
+  }
+  .text-gradient {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 }

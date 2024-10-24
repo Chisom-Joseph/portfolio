@@ -7,7 +7,12 @@ interface WrapperProps {
 
 export default function Wrapper({ children, className }: WrapperProps) {
   return (
-    <div className={clsx("m-auto max-w-[75em] px-[1.5em]", className)}>
+    <div
+      className={clsx(
+        "m-auto max-w-[75em] px-[1.5em] md:px-[2.5em]",
+        className
+      )}
+    >
       {children}
     </div>
   );

@@ -34,11 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-figtree antialiased bg-white dark:bg-darkPurple ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
+        className={`font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
         <ThemeProvider>
           <Header />
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

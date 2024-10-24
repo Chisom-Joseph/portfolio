@@ -1,7 +1,12 @@
+import Wrapper from "@/components/Wrapper";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <Wrapper className="pt-[1.5em] md:pt-[5em] text-center md:text-left">
+      <HeroSection />
+      <AboutSection />
+    </Wrapper>
   );
 }
