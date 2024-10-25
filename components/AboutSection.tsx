@@ -4,7 +4,7 @@ import ButtonGradient from "@/components/ui/custom/ButtonGradient";
 
 export default function AboutSection() {
   return (
-    <section className="mt-[8em] xl:mt-[12em]">
+    <section id="about" className="mt-[8em] xl:mt-[12em]">
       <Wrapper>
         <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
           About Me
@@ -21,11 +21,9 @@ export default function AboutSection() {
           coding, I enjoy sharing my knowledge through educational content on
           TikTok, targeting Nigerian programmers and tech enthusiasts.
         </p>
-        <ButtonGradient
-          className="m-auto"
-          title="Download Resume"
-          icon={<FaDownload />}
-        />
+        <div className="w-fit m-auto">
+          <ButtonGradient title="Download Resume" icon={<FaDownload />} />
+        </div>
       </Wrapper>
     </section>
   );

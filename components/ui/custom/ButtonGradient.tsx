@@ -1,4 +1,9 @@
 import clsx from "clsx";
+import {
+  CardBody,
+  CardContainer,
+  CardItem,
+} from "@/components/ui/3d-card-button";
 
 type buttonProps = {
   title: string;
@@ -12,14 +17,15 @@ export default function ButtonOutlineCustom({
   className,
 }: buttonProps) {
   return (
-    <button
-      className={clsx(
-        "flex items-center justify-between gap-[0.7em] text-white font-bold bg-gradient border rounded-full py-[0.8em] px-[2em] cursor-pointer",
-        className
-      )}
-    >
-      {title}
-      {icon ? icon : ""}
-    </button>
+    <CardContainer className={clsx(className)}>
+      <CardBody>
+        <CardItem translateZ="50">
+          <button className="flex items-center justify-between gap-[0.7em] text-white font-bold bg-gradient border rounded-full py-[0.8em] px-[2em] cursor-pointer">
+            {title}
+            {icon ? icon : ""}
+          </button>
+        </CardItem>
+      </CardBody>
+    </CardContainer>
   );
 }
