@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       colors: {
-        white: "var(--color-white)",
+        white: "hsl(0, 0%, 100%)",
+        lightBorder: "hsla(0, 0%, 0%, 20%)",
         blue: "var(--color-blue)",
         pink: "var(--color-pink)",
         darkPurple: "var(--color-dark-purple)",

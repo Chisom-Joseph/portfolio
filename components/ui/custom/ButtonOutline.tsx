@@ -10,10 +10,10 @@ type buttonProps = {
 
 export default function ButtonOutlineCustom({ title }: buttonProps) {
   return (
-    <CardContainer>
+    <CardContainer className="text-[0.7em]">
       <CardBody>
         <CardItem translateZ="50">
-          <button className="border border-black dark:border-white rounded-full py-[0.5em] px-[2em] cursor-pointer">
+          <button className="border w-max border-black dark:border-white rounded-full py-[0.5em] px-[2em] cursor-pointer">
             {title}
           </button>
         </CardItem>

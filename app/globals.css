@@ -5,6 +5,8 @@
 @layer base {
   :root {
     --color-white: hsl(0, 0%, 100%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-transparent: hsla(0, 0%, 100%, 0.171);
     --color-black: hsl(0, 0%, 0%);
     --color-blue: hsl(249, 100%, 49%);
     --color-pink: hsl(305, 100%, 50%);
