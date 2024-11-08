@@ -5,6 +5,7 @@ import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
 
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const powerGroteskUltraBold = localFont({
   src: "./fonts/PowerGrotesk-UltraBold.woff2",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <BackgroundOverlay />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -83,6 +83,9 @@ const config = {
         figtreeItalic: ["var(--font-figtreeItalic)"],
         powerGroteskUltraBold: ["var(--font-PowerGroteskUltraBold)"],
       },
+      screens: {
+        cmd: "944px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -4,7 +4,7 @@ import Wrapper from "./Wrapper";
 
 export default function ContactSection() {
   return (
-    <section>
+    <section className="mb-16">
       <Wrapper>
         <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
           Contact

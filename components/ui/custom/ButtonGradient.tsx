@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/3d-card-button";
 
 type buttonProps = {
-  title: string;
+  title?: string;
   icon?: React.ReactNode;
   className?: string;
 };
