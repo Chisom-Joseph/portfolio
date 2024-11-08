@@ -9,7 +9,7 @@ export default function AboutSection() {
         <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
           About Me
         </h1>
-        <p className="text-body text-center mb-[2.5em] m-auto">
+        <p className="text-body text-center tracking-wider leading-loose mb-[2.5em] m-auto">
           I'm Chisom Joseph Njoku, a professional full-stack web developer with
           over 4 years of experience. I specialize in building dynamic and
           responsive websites and applications using HTML, CSS, JavaScript,

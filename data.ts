@@ -4,6 +4,7 @@ import project3 from "@/public/images/projects/project3.png";
 import project4 from "@/public/images/projects/project4.png";
 import project5 from "@/public/images/projects/project5.png";
 import project6 from "@/public/images/projects/project6.png";
+
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
 import { FaJs } from "react-icons/fa";
@@ -17,6 +18,16 @@ import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
+
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaSquareWhatsapp } from "react-icons/fa6";
 
 export const navLinks = [
   {
@@ -170,5 +181,62 @@ export const skills = [
     title: "MongoDB",
     icon: SiMongodb,
     category: "Backend",
+  },
+];
+
+export const socialHandles = [
+  {
+    title: "Chisom-Joseph",
+    icon: FaGithub,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@njokuchisomjoseph",
+    icon: FaLinkedin,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@chisomnjokujoseph",
+    icon: AiFillTikTok,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@chisomnjokujoseph",
+    icon: RiInstagramFill,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@chisomjosephnjoku",
+    icon: FaFacebookSquare,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@nj_chisomjoseph",
+    icon: FaXTwitter,
+    description: "",
+    link: "",
+  },
+  {
+    title: "@njokuchisomjoseph",
+    icon: FaYoutube,
+    description: "",
+    link: "",
+  },
+  {
+    title: "njokuchisomjoseph@gmail.com",
+    icon: MdEmail,
+    description: "",
+    link: "",
+  },
+  {
+    title: "+234(0)8058600003",
+    icon: FaSquareWhatsapp,
+    description: "",
+    link: "",
   },
 ];

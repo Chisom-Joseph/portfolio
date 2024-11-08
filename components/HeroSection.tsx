@@ -14,7 +14,7 @@ export default function HeroSection() {
         <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[3em] lg:text-[4em] leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em]">
           Chisom <br /> Joseph <br /> Njoku
         </h1>
-        <p className="text-body max-w-[25em] md:max-w-[30em] mb-[2em] m-auto">
+        <p className="text-body tracking-wider max-w-[23em] md:max-w-[30em] mb-[2em] m-auto">
           Creating elegant and efficient web solutions with a focus on user
           experience and clean code.
         </p>
