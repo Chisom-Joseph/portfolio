@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Wrapper from "@/components/Wrapper";
@@ -62,14 +62,14 @@ export default function ProjectsSection() {
 
         <div
           ref={navListRef}
-          className="relative opacity-0 font-bold flex h-[4em] first-child:text-red-300 items-center justify-around w-max m-auto mb-[4em] rounded-full border-[1px] dark:bg-white/5"
+          className="relative font-bold flex max-h-[4em] first-child:text-red-300 items-center justify-around w-max m-auto mb-[4em] rounded-full border-[1px] dark:bg-white/5"
         >
           {Array.from(projectCategories).map((category, index) => (
             <div
               key={index}
               className={`${
                 activeCategory === category && "text-white"
-              } relative flex items-center px-[2em] h-full cursor-pointer transition-all duration-500 ease-in-out`}
+              } md:text-[1em] text-[0.7em] py-4 relative flex items-center px-[2em] h-full cursor-pointer transition-all duration-500 ease-in-out`}
               onClick={() => handleCategoryChange({ category, index })}
             >
               {index == 0 && (
