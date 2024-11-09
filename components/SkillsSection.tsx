@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { skills } from "@/data";
 import Wrapper from "./Wrapper";
+import AOS from "aos";
 
 export default function SkillsSection() {
   const navListRef = useRef<HTMLDivElement | null>(null);
@@ -20,6 +21,10 @@ export default function SkillsSection() {
       );
     });
   }, []);
+
+  useLayoutEffect(() => {
+    AOS.refresh();
+  }, [activeSkill]);
 
   const handleCategoryChange = ({
     skill,
@@ -45,12 +50,17 @@ export default function SkillsSection() {
   return (
     <section className="mb-[8em]">
       <Wrapper>
-        <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
+        <h1
+          data-aos="fade-down"
+          className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto"
+        >
           Skills
         </h1>
 
         <div
           ref={navListRef}
+          data-aos="flip-up"
+          data-aos-duration="5000"
           className="relative font-bold flex max-h-[4em] first-child:text-red-300 items-center justify-around w-max m-auto mb-[4em] rounded-full border-[1px] dark:bg-white/5"
         >
           {Array.from(skillCategories).map((skill, index) => (
@@ -72,15 +82,19 @@ export default function SkillsSection() {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto mb-16 flex items-center justify-center flex-wrap gap-6">
+        <div
+          data-aos="zoom-out-up"
+          className="max-w-4xl mx-auto mb-16 flex items-center justify-center flex-wrap gap-6"
+        >
           {skills.map((skill, index) => (
             <div
               key={index}
+              data-aos="zoom-in"
               className={`${
                 skill.category === activeSkill || activeSkill === "All"
                   ? ""
                   : "hidden"
-              } text-body text-center`}
+              } hover:scale-110 transition-all cursor-pointer text-body text-center`}
             >
               <div className="text-6xl p-4 border-[1px] border-body rounded-[0.55em] w-fit mb-4">
                 <skill.icon />

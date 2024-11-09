@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useLayoutEffect } from "react";
+import AOS from "aos";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Wrapper from "@/components/Wrapper";
@@ -24,6 +25,10 @@ export default function ProjectsSection() {
       );
     });
   }, []);
+
+  useLayoutEffect(() => {
+    AOS.refresh();
+  }, [activeCategory]);
 
   useGSAP(
     () => {
@@ -56,12 +61,17 @@ export default function ProjectsSection() {
   return (
     <section id="about" className="mt-[8em] xl:mt-[12em] mb-[8em]">
       <Wrapper>
-        <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
+        <h1
+          data-aos="fade-down"
+          className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto"
+        >
           Projects
         </h1>
 
         <div
           ref={navListRef}
+          data-aos="flip-up"
+          data-aos-duration="5000"
           className="relative font-bold flex max-h-[4em] first-child:text-red-300 items-center justify-around w-max m-auto mb-[4em] rounded-full border-[1px] dark:bg-white/5"
         >
           {Array.from(projectCategories).map((category, index) => (
@@ -83,23 +93,32 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        <BentoGrid className="max-w-4xl mx-auto mb-16">
-          {projects.map((project, index) => (
-            <BentoGridItem
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              className={`${
-                project.category === activeCategory || activeCategory === "All"
-                  ? ""
-                  : "hidden"
-              }`}
-            />
-          ))}
-        </BentoGrid>
+        <div data-aos="zoom-in-up">
+          <BentoGrid className="max-w-4xl mx-auto mb-16">
+            {projects.map((project, index) => (
+              <BentoGridItem
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                data-aos="flip-up"
+                className={`${
+                  project.category === activeCategory ||
+                  activeCategory === "All"
+                    ? ""
+                    : "hidden"
+                }`}
+              />
+            ))}
+          </BentoGrid>
+        </div>
 
-        <div className="m-auto w-fit">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="5000"
+          className="m-auto w-fit"
+        >
           <ButtonOutlineCustom title="More" icon={<FaArrowRight />} />
         </div>
       </Wrapper>

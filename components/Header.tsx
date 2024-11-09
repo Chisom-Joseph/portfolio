@@ -19,8 +19,10 @@ export default function Header() {
           {navLinks.map((navLink, index) => (
             <Link
               className={`
-                hover:text-blue transition-all
-                ${currentPage === navLink.path ? "text-blue" : ""}`}
+                hover:text-blue dark:hover:text-pink transition-all
+                ${
+                  currentPage === navLink.path ? "text-blue dark:text-pink" : ""
+                }`}
               href={navLink.path}
               key={index}
               onClick={() => setCurrentPage(navLink.path)}
@@ -40,9 +42,11 @@ export default function Header() {
               {navLinks.map((navLink, index) => (
                 <Link
                   className={`
-                hover:text-blue transition-all border-b-[1px] px-[1.3em] py-[1em]
+                hover:text-blue dark:hover:text-pink transition-all border-b-[1px] px-[1.3em] py-[1em]
                 ${index === 0 ? "border-t-[1px]" : ""}
-                ${currentPage === navLink.path ? "text-blue" : ""}`}
+                ${
+                  currentPage === navLink.path ? "text-blue dark:text-pink" : ""
+                }`}
                   href={navLink.path}
                   key={index}
                   onClick={() => setCurrentPage(navLink.path)}

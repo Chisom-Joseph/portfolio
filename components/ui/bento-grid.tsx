@@ -26,6 +26,7 @@ export const BentoGridItem = ({
   title,
   description,
   image,
+  ...props
 }: {
   className?: string;
   image: any;
@@ -38,6 +39,7 @@ export const BentoGridItem = ({
         "max-w-[25em] md:max-w-full m-auto row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-white/5 dark:border-white/[0.2] bg-transparent border border-lightBorder justify-between flex flex-col space-y-4",
         className
       )}
+      {...props}
     >
       <div className="rounded-xl overflow-hidden">
         <Image className="lg:max-w-full" src={image} alt={title} />

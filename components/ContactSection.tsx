@@ -6,18 +6,27 @@ export default function ContactSection() {
   return (
     <section className="mb-16">
       <Wrapper>
-        <h1 className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto">
+        <h1
+          data-aos="fade-down"
+          className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto"
+        >
           Contact
         </h1>
 
         <div className="grid md:grid-cols-2 gap-10 lg:gap-32">
-          <div className="mb-10">
-            <h2 className="text-gradient w-fit mb-4">Write me a message</h2>
+          <div data-aos="fade-right" className="mb-10">
+            <h2 data-aos="fade-up" className="text-gradient w-fit mb-4">
+              Write me a message
+            </h2>
             <form
               className="flex flex-col items-start justify-center gap-7 border-body border-[1px] rounded-2xl p-6"
               action="POST"
             >
-              <div className="flex flex-col items-start justify-center w-full">
+              <div
+                data-aos="flip-up"
+                data-aos-duration="5000"
+                className="flex flex-col items-start justify-center w-full"
+              >
                 <label className="inline-bolock mb-1.5" htmlFor="name">
                   Name
                 </label>
@@ -28,7 +37,11 @@ export default function ContactSection() {
                   placeholder="Name"
                 />
               </div>
-              <div className="flex flex-col items-start justify-center w-full">
+              <div
+                data-aos="flip-up"
+                data-aos-duration="5000"
+                className="flex flex-col items-start justify-center w-full"
+              >
                 <label className="inline-bolock mb-1.5" htmlFor="email">
                   Email
                 </label>
@@ -39,7 +52,11 @@ export default function ContactSection() {
                   placeholder="Name"
                 />
               </div>
-              <div className="flex flex-col items-start justify-center w-full">
+              <div
+                data-aos="flip-up"
+                data-aos-duration="5000"
+                className="flex flex-col items-start justify-center w-full"
+              >
                 <label className="inline-bolock mb-1.5" htmlFor="message">
                   Email
                 </label>
@@ -51,7 +68,11 @@ export default function ContactSection() {
                   placeholder="Message"
                 ></textarea>
               </div>
-              <div className="flex w-full">
+              <div
+                data-aos="flip-up"
+                data-aos-duration="5000"
+                className="flex w-full"
+              >
                 <ButtonOutlineCustom
                   className="text-white w-full"
                   title="Submit"
@@ -60,12 +81,15 @@ export default function ContactSection() {
             </form>
           </div>
 
-          <div>
-            <h2 className="text-gradient w-fit mb-4">Social handles</h2>
+          <div data-aos="fade-left">
+            <h2 data-aos="fade-up" className="text-gradient w-fit mb-4">
+              Social handles
+            </h2>
             <div className="flex flex-col items-start justify-center gap-4">
               {socialHandles.map((socialHandle, index) => (
                 <div
                   key={index}
+                  data-aos="fade-left"
                   className="text-body text-lg flex items-center justify-start gap-4"
                 >
                   <div className="flex items-center justify-start text-2xl p-1.5 border-[1px] border-body rounded-full">

@@ -33,9 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
+        className={`overflow-x-hidden font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
         <ThemeProvider>
           <Header />
