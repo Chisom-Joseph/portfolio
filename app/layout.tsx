@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
+import { AOSProvider } from "@/providers/AOSprovider";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,10 +39,12 @@ export default function RootLayout({
         className={`overflow-x-hidden font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
         <ThemeProvider>
-          <Header />
-          <main>{children}</main>
-          <BackgroundOverlay />
-          <Footer />
+          <AOSProvider>
+            <Header />
+            <main>{children}</main>
+            <BackgroundOverlay />
+            <Footer />
+          </AOSProvider>
         </ThemeProvider>
       </body>
     </html>

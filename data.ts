@@ -1,3 +1,4 @@
+import { IconType } from "react-icons";
 import project1 from "@/public/images/projects/project1.png";
 import project2 from "@/public/images/projects/project2.png";
 import project3 from "@/public/images/projects/project3.png";
@@ -184,58 +185,72 @@ export const skills = [
   },
 ];
 
+export const socialHandleIcons = {
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  tiktok: AiFillTikTok,
+  instagram: RiInstagramFill,
+  facebook: FaFacebookSquare,
+  x: FaXTwitter,
+  youtube: FaYoutube,
+  email: MdEmail,
+  whatsapp: FaSquareWhatsapp,
+};
+
+export type IconName = keyof typeof socialHandleIcons;
+
 export const socialHandles = [
   {
     title: "Chisom-Joseph",
-    icon: FaGithub,
+    icon: "github" as IconName,
     description: "",
-    link: "",
+    link: "https://github.com/Chisom-Joseph",
   },
   {
     title: "@njokuchisomjoseph",
-    icon: FaLinkedin,
+    icon: "linkedin" as IconName,
     description: "",
-    link: "",
+    link: "https://linkedin.com/in/njokuchisomjoseph/",
   },
   {
     title: "@chisomnjokujoseph",
-    icon: AiFillTikTok,
+    icon: "tiktok" as IconName,
     description: "",
-    link: "",
+    link: "https://www.tiktok.com/@chisomnjokujoseph",
   },
   {
     title: "@chisomnjokujoseph",
-    icon: RiInstagramFill,
+    icon: "instagram" as IconName,
     description: "",
-    link: "",
+    link: "https://www.instagram.com/chisomjosephnjoku",
   },
   {
     title: "@chisomjosephnjoku",
-    icon: FaFacebookSquare,
+    icon: "facebook" as IconName,
     description: "",
-    link: "",
+    link: "https://web.facebook.com/chisomjosephnjoku/",
   },
   {
     title: "@nj_chisomjoseph",
-    icon: FaXTwitter,
+    icon: "x" as IconName,
     description: "",
-    link: "",
+    link: "https://x.com/nj_chisomjoseph",
   },
   {
     title: "@njokuchisomjoseph",
-    icon: FaYoutube,
+    icon: "youtube" as IconName,
     description: "",
-    link: "",
+    link: "https://www.youtube.com/@njokuchisomjoseph",
   },
   {
     title: "njokuchisomjoseph@gmail.com",
-    icon: MdEmail,
+    icon: "email" as IconName,
     description: "",
-    link: "",
+    link: "mailto:njokuchisomjoseph@gmail.com",
   },
   {
     title: "+234(0)8058600003",
-    icon: FaSquareWhatsapp,
+    icon: "whatsapp" as IconName,
     description: "",
     link: "",
   },

@@ -1,6 +1,7 @@
 import { socialHandles } from "@/data";
-import ButtonOutlineCustom from "./ui/custom/ButtonGradientFull";
-import Wrapper from "./Wrapper";
+import ButtonOutlineCustom from "@/components/ui/custom/ButtonGradientFull";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import Wrapper from "@/components/Wrapper";
 
 export default function ContactSection() {
   return (
@@ -8,30 +9,30 @@ export default function ContactSection() {
       <Wrapper>
         <h1
           data-aos="fade-down"
-          className="font-powerGroteskUltraBold text-[3em] md:text-[4em] w-fit leading-[0.9em] md:leading-[1em] mb-[0.5em] mt-[0.2em] m-auto"
+          className="m-auto mb-[0.5em] mt-[0.2em] w-fit font-powerGroteskUltraBold text-[3em] leading-[0.9em] md:text-[4em] md:leading-[1em]"
         >
           Contact
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-32">
+        <div className="grid gap-10 md:grid-cols-2 lg:gap-32">
           <div data-aos="fade-right" className="mb-10">
-            <h2 data-aos="fade-up" className="text-gradient w-fit mb-4">
+            <h2 data-aos="fade-up" className="text-gradient mb-4 w-fit">
               Write me a message
             </h2>
             <form
-              className="flex flex-col items-start justify-center gap-7 border-body border-[1px] rounded-2xl p-6"
+              className="flex flex-col items-start justify-center gap-7 rounded-2xl border-[1px] border-body p-6"
               action="POST"
             >
               <div
                 data-aos="flip-up"
                 data-aos-duration="5000"
-                className="flex flex-col items-start justify-center w-full"
+                className="flex w-full flex-col items-start justify-center"
               >
                 <label className="inline-bolock mb-1.5" htmlFor="name">
                   Name
                 </label>
                 <input
-                  className="bg-transparent border-body border-[1px] rounded-xl p-2 w-full"
+                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
                   id="name"
                   type="text"
                   placeholder="Name"
@@ -40,13 +41,13 @@ export default function ContactSection() {
               <div
                 data-aos="flip-up"
                 data-aos-duration="5000"
-                className="flex flex-col items-start justify-center w-full"
+                className="flex w-full flex-col items-start justify-center"
               >
                 <label className="inline-bolock mb-1.5" htmlFor="email">
                   Email
                 </label>
                 <input
-                  className="bg-transparent border-body border-[1px] rounded-xl p-2 w-full"
+                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
                   id="email"
                   type="email"
                   placeholder="Name"
@@ -55,14 +56,14 @@ export default function ContactSection() {
               <div
                 data-aos="flip-up"
                 data-aos-duration="5000"
-                className="flex flex-col items-start justify-center w-full"
+                className="flex w-full flex-col items-start justify-center"
               >
                 <label className="inline-bolock mb-1.5" htmlFor="message">
                   Email
                 </label>
                 <textarea
                   rows={4}
-                  className="bg-transparent border-body border-[1px] rounded-xl p-2 w-full"
+                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
                   name="message"
                   id="message"
                   placeholder="Message"
@@ -74,7 +75,7 @@ export default function ContactSection() {
                 className="flex w-full"
               >
                 <ButtonOutlineCustom
-                  className="text-white w-full"
+                  className="w-full text-white"
                   title="Submit"
                 />
               </div>
@@ -82,21 +83,18 @@ export default function ContactSection() {
           </div>
 
           <div data-aos="fade-left">
-            <h2 data-aos="fade-up" className="text-gradient w-fit mb-4">
+            <h2 data-aos="fade-up" className="text-gradient mb-4 w-fit">
               Social handles
             </h2>
             <div className="flex flex-col items-start justify-center gap-4">
               {socialHandles.map((socialHandle, index) => (
-                <div
+                <AnimatedTooltip
                   key={index}
-                  data-aos="fade-left"
-                  className="text-body text-lg flex items-center justify-start gap-4"
-                >
-                  <div className="flex items-center justify-start text-2xl p-1.5 border-[1px] border-body rounded-full">
-                    <socialHandle.icon />
-                  </div>
-                  <p>{socialHandle.title}</p>
-                </div>
+                  item={{
+                    id: index,
+                    ...socialHandle,
+                  }}
+                />
               ))}
             </div>
           </div>
