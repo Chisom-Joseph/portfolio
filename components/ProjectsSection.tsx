@@ -7,6 +7,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import ButtonOutlineCustom from "./ui/custom/ButtonGradient";
 import { FaArrowRight } from "react-icons/fa6";
 import AnimatedNav from "@/components/ui/custom/AnimatedNav";
+import Section from "@/components/Section";
 
 export default function ProjectsSection() {
   const [projectCategories, setProjectCategories] = useState<Set<string>>(
@@ -27,7 +28,10 @@ export default function ProjectsSection() {
   }, [activeCategory]);
 
   return (
-    <section id="about" className="mb-[8em] mt-[8em] xl:mt-[12em]">
+    <Section
+      id="projects"
+      className="mb-[8em] mt-[8em] xl:mt-[12em] scroll-m-12"
+    >
       <Wrapper>
         <h1
           data-aos="fade-down"
@@ -71,6 +75,6 @@ export default function ProjectsSection() {
           <ButtonOutlineCustom title="More" icon={<FaArrowRight />} />
         </div>
       </Wrapper>
-    </section>
+    </Section>
   );
 }

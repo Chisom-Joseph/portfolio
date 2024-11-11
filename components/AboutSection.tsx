@@ -3,10 +3,11 @@ import { useLayoutEffect } from "react";
 import { FaDownload } from "react-icons/fa6";
 import Wrapper from "@/components/Wrapper";
 import ButtonGradient from "@/components/ui/custom/ButtonGradient";
+import Section from "@/components/Section";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="mt-[8em] xl:mt-[12em]">
+    <Section id="aboutMe" className="mt-[8em] xl:mt-[12em] scroll-m-12">
       <Wrapper>
         <h1
           data-aos="fade-down"
@@ -40,6 +41,6 @@ export default function AboutSection() {
           <ButtonGradient title="Download Resume" icon={<FaDownload />} />
         </div>
       </Wrapper>
-    </section>
+    </Section>
   );
 }

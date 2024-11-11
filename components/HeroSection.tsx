@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Section from "@/components/Section";
 import profileImage from "@/public/images/profileImage.png";
 import profileBackgroundImage from "@/public/images/profileBackgroundImage.png";
 import ButtonGradient from "@/components/ui/custom/ButtonGradient";
@@ -43,7 +44,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex flex-col-reverse items-stretch justify-center gap-[2em] md:flex-row md:items-center md:justify-between md:gap-[6em] lg:gap-[8em]">
+    <Section
+      id="/"
+      className="flex flex-col-reverse items-stretch justify-center gap-[2em] md:flex-row md:items-center md:justify-between md:gap-[6em] lg:gap-[8em]"
+    >
       <div>
         <span data-aos="fade-up" className="text-gradient">
           Hi, I am
@@ -62,7 +66,7 @@ export default function HeroSection() {
           experience and clean code.
         </p>
         <Link
-          href="#works"
+          href="#projects"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
           data-aos-duration="5000"
@@ -98,6 +102,6 @@ export default function HeroSection() {
           </CardBody>
         </CardContainer>
       </div>
-    </section>
+    </Section>
   );
 }

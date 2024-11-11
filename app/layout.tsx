@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
+import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import { AOSProvider } from "@/providers/AOSprovider";
 
 import Header from "@/components/Header";
@@ -40,10 +41,12 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <AOSProvider>
-            <Header />
-            <main>{children}</main>
-            <BackgroundOverlay />
-            <Footer />
+            <ActiveNavProvider>
+              <Header />
+              <main>{children}</main>
+              <BackgroundOverlay />
+              <Footer />
+            </ActiveNavProvider>
           </AOSProvider>
         </ThemeProvider>
       </body>

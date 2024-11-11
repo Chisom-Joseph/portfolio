@@ -2,10 +2,11 @@ import { socialHandles } from "@/data";
 import ButtonOutlineCustom from "@/components/ui/custom/ButtonGradientFull";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Wrapper from "@/components/Wrapper";
+import Section from "@/components/Section";
 
 export default function ContactSection() {
   return (
-    <section className="mb-16">
+    <Section id="contact" className="mb-16 scroll-m-12">
       <Wrapper>
         <h1
           data-aos="fade-down"
@@ -100,6 +101,6 @@ export default function ContactSection() {
           </div>
         </div>
       </Wrapper>
-    </section>
+    </Section>
   );
 }

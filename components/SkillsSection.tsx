@@ -4,6 +4,7 @@ import { skills } from "@/data";
 import Wrapper from "./Wrapper";
 import AOS from "aos";
 import CategoryNav from "@/components/ui/custom/AnimatedNav";
+import Section from "@/components/Section";
 
 export default function SkillsSection() {
   const [skillCategories, setSkillCategories] = useState<Set<string>>(
@@ -24,7 +25,7 @@ export default function SkillsSection() {
   }, [activeSkill]);
 
   return (
-    <section className="mb-[8em]">
+    <Section id="skills" className="mb-[8em] scroll-m-12">
       <Wrapper>
         <h1
           data-aos="fade-down"
@@ -61,6 +62,6 @@ export default function SkillsSection() {
           ))}
         </div>
       </Wrapper>
-    </section>
+    </Section>
   );
 }

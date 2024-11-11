@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Link from "next/link";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -7,9 +7,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Wrapper from "@/components/Wrapper";
 import ButtonOutlineCustom from "./ui/custom/ButtonOutline";
 import { navLinks } from "@/data";
+import { ActiveNavContext } from "@/providers/ActiveNavProvider";
 
 export default function Header() {
-  const [currentPage, setCurrentPage] = useState("/");
+  const activeNavContext = useContext(ActiveNavContext);
+  const activeSection = activeNavContext?.activeSection;
+  const updateActiveSection = activeNavContext?.updateActiveSection;
 
   return (
     <header>
@@ -21,11 +24,16 @@ export default function Header() {
               className={`
                 hover:text-blue dark:hover:text-pink transition-all
                 ${
-                  currentPage === navLink.path ? "text-blue dark:text-pink" : ""
+                  navLink.path.includes(activeSection as string)
+                    ? "text-blue dark:text-pink"
+                    : ""
                 }`}
               href={navLink.path}
               key={index}
-              onClick={() => setCurrentPage(navLink.path)}
+              onClick={() => {
+                if (updateActiveSection)
+                  return updateActiveSection(navLink.path);
+              }}
             >
               {navLink.name}
             </Link>
@@ -45,11 +53,16 @@ export default function Header() {
                 hover:text-blue dark:hover:text-pink transition-all border-b-[1px] px-[1.3em] py-[1em]
                 ${index === 0 ? "border-t-[1px]" : ""}
                 ${
-                  currentPage === navLink.path ? "text-blue dark:text-pink" : ""
+                  navLink.path.includes(activeSection as string)
+                    ? "text-blue dark:text-pink"
+                    : ""
                 }`}
                   href={navLink.path}
                   key={index}
-                  onClick={() => setCurrentPage(navLink.path)}
+                  onClick={() => {
+                    if (updateActiveSection)
+                      return updateActiveSection(navLink.path);
+                  }}
                 >
                   {navLink.name}
                 </Link>
