@@ -1,5 +1,5 @@
 "use client";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import ThemeToggle from "@/components/ThemeToggle";

@@ -1,12 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import { navLinks } from "@/data";
 import Wrapper from "./Wrapper";
 import { FaArrowUp } from "react-icons/fa6";
+import { ActiveNavContext } from "@/providers/ActiveNavProvider";
 
 export default function Footer() {
-  const [currentPage, setCurrentPage] = useState("/");
+  const activeNavContext = useContext(ActiveNavContext);
+  const activeSection = activeNavContext?.activeSection;
+  const updateActiveSection = activeNavContext?.updateActiveSection;
+
   return (
     <footer data-aos="zoom-in-up" data-aos-offset="50" className="mb-16">
       <Wrapper className="flex items-center justify-between border-body gap-2 md:gap-[3em] border-t-[1px] pt-5">
@@ -33,11 +37,16 @@ export default function Footer() {
                 className={`
                 hover:text-blue dark:hover:text-pink transition-all
                 ${
-                  currentPage === navLink.path ? "text-blue dark:text-pink" : ""
+                  navLink.path.includes(activeSection as string)
+                    ? "text-blue dark:text-pink"
+                    : ""
                 }`}
                 href={navLink.path}
                 key={index}
-                onClick={() => setCurrentPage(navLink.path)}
+                onClick={() => {
+                  if (updateActiveSection)
+                    return updateActiveSection(navLink.path);
+                }}
               >
                 {navLink.name}
               </Link>
