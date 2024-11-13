@@ -31,13 +31,15 @@ export default function Footer() {
           >
             {navLinks.map((navLink, index) => (
               <Link
+                rel="noopener noreferrer"
+                prefetch={true}
                 data-aos="zoom-in"
                 data-aos-offset="50"
                 data-aos-duration="600"
                 className={`
                 hover:text-blue dark:hover:text-pink transition-all
                 ${
-                  navLink.path.includes(activeSection as string)
+                  navLink.path === (activeSection as string)
                     ? "text-blue dark:text-pink"
                     : ""
                 }`}

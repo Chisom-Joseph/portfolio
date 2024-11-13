@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -7,7 +8,7 @@ import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import { AOSProvider } from "@/providers/AOSprovider";
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 const powerGroteskUltraBold = localFont({
   src: "./fonts/PowerGrotesk-UltraBold.woff2",

@@ -5,7 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Section from "@/components/Section";
-import profileImage from "@/public/images/profileImage.png";
+import profileImage from "@/public/images/profileImage.jpg";
 import profileBackgroundImage from "@/public/images/profileBackgroundImage.png";
 import ButtonGradient from "@/components/ui/custom/ButtonGradient";
 import { FaArrowRight } from "react-icons/fa6";
@@ -97,6 +97,7 @@ export default function HeroSection() {
                 className="h-[100%] w-[100%] object-cover transition-[transform] hover:scale-105"
                 src={profileImage}
                 alt="Profile Image"
+                loading="eager"
               />
             </CardItem>
           </CardBody>

@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import dynamic from "next/dynamic";
 import project1 from "@/public/images/projects/project1.png";
 import project2 from "@/public/images/projects/project2.png";
 import project3 from "@/public/images/projects/project3.png";
@@ -6,29 +6,94 @@ import project4 from "@/public/images/projects/project4.png";
 import project5 from "@/public/images/projects/project5.png";
 import project6 from "@/public/images/projects/project6.png";
 
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa6";
-import { FaJs } from "react-icons/fa";
-import { SiJquery } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
-import { SiMysql } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
+const FaHtml5 = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaHtml5),
+  { ssr: false }
+);
+const FaCss3Alt = dynamic(
+  () => import("react-icons/fa6").then((mod) => mod.FaCss3Alt),
+  { ssr: false }
+);
+const FaJs = dynamic(() => import("react-icons/fa").then((mod) => mod.FaJs), {
+  ssr: false,
+});
+const SiJquery = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiJquery),
+  { ssr: false }
+);
+const FaBootstrap = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaBootstrap),
+  { ssr: false }
+);
+const RiTailwindCssFill = dynamic(
+  () => import("react-icons/ri").then((mod) => mod.RiTailwindCssFill),
+  { ssr: false }
+);
+const SiTypescript = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiTypescript),
+  { ssr: false }
+);
+const FaNodeJs = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaNodeJs),
+  { ssr: false }
+);
+const SiExpress = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiExpress),
+  { ssr: false }
+);
+const FaReact = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaReact),
+  { ssr: false }
+);
+const RiNextjsFill = dynamic(
+  () => import("react-icons/ri").then((mod) => mod.RiNextjsFill),
+  { ssr: false }
+);
+const SiMysql = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiMysql),
+  { ssr: false }
+);
+const SiMongodb = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiMongodb),
+  { ssr: false }
+);
 
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { AiFillTikTok } from "react-icons/ai";
-import { RiInstagramFill } from "react-icons/ri";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { FaSquareWhatsapp } from "react-icons/fa6";
+const FaGithub = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaGithub),
+  { ssr: false }
+);
+const FaLinkedin = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaLinkedin),
+  { ssr: false }
+);
+const AiFillTikTok = dynamic(
+  () => import("react-icons/ai").then((mod) => mod.AiFillTikTok),
+  { ssr: false }
+);
+const RiInstagramFill = dynamic(
+  () => import("react-icons/ri").then((mod) => mod.RiInstagramFill),
+  { ssr: false }
+);
+const FaFacebookSquare = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaFacebookSquare),
+  { ssr: false }
+);
+const FaXTwitter = dynamic(
+  () => import("react-icons/fa6").then((mod) => mod.FaXTwitter),
+  { ssr: false }
+);
+const FaYoutube = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaYoutube),
+  { ssr: false }
+);
+const MdEmail = dynamic(
+  () => import("react-icons/md").then((mod) => mod.MdEmail),
+  { ssr: false }
+);
+const FaSquareWhatsapp = dynamic(
+  () => import("react-icons/fa6").then((mod) => mod.FaSquareWhatsapp),
+  { ssr: false }
+);
 
 export const navLinks = [
   {

@@ -42,7 +42,14 @@ export const BentoGridItem = ({
       {...props}
     >
       <div className="rounded-xl overflow-hidden">
-        <Image className="lg:max-w-full" src={image} alt={title} />
+        <Image
+          className="lg:max-w-full"
+          src={image}
+          alt={title}
+          loading="lazy"
+          decoding="sync"
+          quality={50}
+        />
       </div>
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         <div className="font-powerGroteskUltraBold font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">

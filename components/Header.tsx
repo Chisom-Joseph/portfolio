@@ -24,11 +24,13 @@ export default function Header() {
               className={`
                 hover:text-blue dark:hover:text-pink transition-all
                 ${
-                  navLink.path.includes(activeSection as string)
+                  navLink.path === (activeSection as string)
                     ? "text-blue dark:text-pink"
                     : ""
                 }`}
               href={navLink.path}
+              rel="noopener noreferrer"
+              prefetch={true}
               key={index}
               onClick={() => {
                 if (updateActiveSection)
@@ -53,11 +55,13 @@ export default function Header() {
                 hover:text-blue dark:hover:text-pink transition-all border-b-[1px] px-[1.3em] py-[1em]
                 ${index === 0 ? "border-t-[1px]" : ""}
                 ${
-                  navLink.path.includes(activeSection as string)
+                  navLink.path === (activeSection as string)
                     ? "text-blue dark:text-pink"
                     : ""
                 }`}
                   href={navLink.path}
+                  rel="noopener noreferrer"
+                  prefetch={true}
                   key={index}
                   onClick={() => {
                     if (updateActiveSection)
