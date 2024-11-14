@@ -34,7 +34,6 @@ export const ActiveNavProvider: React.FC<ActiveNavProviderProps> = ({
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
-          console.log(entry);
         });
       },
       { threshold: 0.5 }
@@ -53,7 +52,6 @@ export const ActiveNavProvider: React.FC<ActiveNavProviderProps> = ({
 
   const registerSection = (id: string, ref: HTMLElement) => {
     sectionsRef.current[id] = ref;
-    console.log("I was triggerd__");
   };
 
   const updateActiveSection = (activeSection: string) => {

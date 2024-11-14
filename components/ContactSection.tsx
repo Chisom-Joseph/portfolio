@@ -1,8 +1,8 @@
 import { socialHandles } from "@/data";
-import ButtonOutlineCustom from "@/components/ui/custom/ButtonGradientFull";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Wrapper from "@/components/Wrapper";
 import Section from "@/components/Section";
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactSection() {
   return (
@@ -20,67 +20,7 @@ export default function ContactSection() {
             <h2 data-aos="fade-up" className="text-gradient mb-4 w-fit">
               Write me a message
             </h2>
-            <form
-              className="flex flex-col items-start justify-center gap-7 rounded-2xl border-[1px] border-body p-6"
-              action="POST"
-            >
-              <div
-                data-aos="flip-up"
-                data-aos-duration="5000"
-                className="flex w-full flex-col items-start justify-center"
-              >
-                <label className="inline-bolock mb-1.5" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
-                  id="name"
-                  type="text"
-                  placeholder="Name"
-                />
-              </div>
-              <div
-                data-aos="flip-up"
-                data-aos-duration="5000"
-                className="flex w-full flex-col items-start justify-center"
-              >
-                <label className="inline-bolock mb-1.5" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
-                  id="email"
-                  type="email"
-                  placeholder="Name"
-                />
-              </div>
-              <div
-                data-aos="flip-up"
-                data-aos-duration="5000"
-                className="flex w-full flex-col items-start justify-center"
-              >
-                <label className="inline-bolock mb-1.5" htmlFor="message">
-                  Email
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full rounded-xl border-[1px] border-body bg-transparent p-2"
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div
-                data-aos="flip-up"
-                data-aos-duration="5000"
-                className="flex w-full"
-              >
-                <ButtonOutlineCustom
-                  className="w-full text-white"
-                  title="Submit"
-                />
-              </div>
-            </form>
+            <ContactForm />
           </div>
 
           <div data-aos="fade-left">

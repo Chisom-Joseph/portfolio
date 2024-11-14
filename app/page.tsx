@@ -13,7 +13,7 @@ const ContactSection = dynamic(() => import("@/components/ContactSection"), {
 });
 
 export default async function Home() {
-  await new Promise((resolve) => setTimeout(resolve, 7000)); // Wait for 5 second
+  // await new Promise((resolve) => setTimeout(resolve, 7000)); // Wait for 5 second
   return (
     <Wrapper className="pt-[1.5em] md:pt-[5em] text-center md:text-left">
       <HeroSection />

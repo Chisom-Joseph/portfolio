@@ -9,12 +9,15 @@ type buttonProps = {
   title: string;
   icon?: React.ReactNode;
   className?: string;
+  disabled?: boolean;
 };
 
 export default function ButtonOutlineCustom({
   title,
   icon,
   className,
+  disabled,
+  ...rest
 }: buttonProps) {
   return (
     <CardContainer className={clsx(className)}>

@@ -6,6 +6,7 @@ import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import { AOSProvider } from "@/providers/AOSprovider";
+const DeviceInfoLogger = dynamic(() => import("@/components/DeviceInfoLogger"));
 
 import Header from "@/components/Header";
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
@@ -51,6 +52,7 @@ export default function RootLayout({
           </AOSProvider>
         </ThemeProvider>
       </body>
+      <DeviceInfoLogger />
     </html>
   );
 }
