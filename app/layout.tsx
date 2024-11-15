@@ -6,7 +6,7 @@ import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import { AOSProvider } from "@/providers/AOSprovider";
-const DeviceInfoLogger = dynamic(() => import("@/components/DeviceInfoLogger"));
+import DeviceInfoLogger from "@/components/DeviceInfoLogger";
 
 import Header from "@/components/Header";
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`overflow-x-hidden font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
+        className={`font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
         <ThemeProvider>
           <AOSProvider>
