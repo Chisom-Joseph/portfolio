@@ -7,6 +7,7 @@ const AiOutlineLoading3Quarters = dynamic(
 );
 import submitContactForm from "@/app/actions/submitContactForm";
 import ButtonOutlineCustom from "@/components/ui/custom/ButtonGradientFull";
+import AnimatedModal from "@/components/ui/custom/Modal";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -95,6 +96,7 @@ export default function ContactForm() {
           })}
         />
       </div>
+      <AnimatedModal />
     </form>
   );
 }

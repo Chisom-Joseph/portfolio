@@ -41,7 +41,7 @@ export const BentoGridItem = ({
       )}
       {...props}
     >
-      <div className="rounded-xl overflow-hidden">
+      <div className="overflow-hidden rounded-xl">
         <Image
           className="lg:max-w-full"
           src={image}
@@ -51,14 +51,14 @@ export const BentoGridItem = ({
           quality={50}
         />
       </div>
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        <div className="font-powerGroteskUltraBold font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+      <div className="transition duration-200 group-hover/bento:translate-x-2">
+        <div className="mb-2 mt-2 font-powerGroteskUltraBold font-bold text-neutral-600 dark:text-neutral-200">
           {title}
         </div>
-        <div className="font-sans font-normal text-body text-xs mb-[1.5em]">
+        <div className="mb-[1.5em] font-sans text-xs font-normal text-body">
           {description}
         </div>
-        <div className="flex items-center md:justify-start justify-center gap-[0.7em]">
+        <div className="flex items-center justify-center gap-[0.7em] md:justify-start">
           <ButtonOutlineCustom title="Live Preview" />
           <ButtonOutlineCustom title="Github" />
         </div>

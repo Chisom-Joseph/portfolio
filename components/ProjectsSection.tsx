@@ -30,7 +30,7 @@ export default function ProjectsSection() {
   return (
     <Section
       id="projects"
-      className="mb-[8em] mt-[8em] xl:mt-[12em] scroll-m-12"
+      className="mb-[8em] mt-[8em] scroll-m-12 xl:mt-[12em]"
     >
       <Wrapper>
         <h1
@@ -46,8 +46,8 @@ export default function ProjectsSection() {
           onCategoryChange={setActiveCategory}
         />
 
-        <div data-aos="zoom-in-up">
-          <BentoGrid className="mx-auto mb-16 max-w-4xl">
+        <div className="mx-auto mb-16 max-w-4xl" data-aos="zoom-in-up">
+          <BentoGrid>
             {projects.map((project, index) => (
               <BentoGridItem
                 key={index}
