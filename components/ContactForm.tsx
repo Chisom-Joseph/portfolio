@@ -26,11 +26,25 @@ export default function ContactForm() {
     // Call the server action
     const result = await submitContactForm(formData);
 
+    // Handle errors
+    if (!result.success) {
+      setResponse({
+        success: false,
+        message: result.message,
+      });
+      setLoading(false);
+      return;
+    }
+
     // Update response state
     setResponse(result);
     setLoading(false);
-    setOpen(true);
+
+    if (result.success) {
+      setOpen(true);
+    }
   };
+
   return (
     <form
       className="flex flex-col items-start justify-center gap-7 rounded-2xl border-[1px] border-body p-6"
@@ -65,7 +79,7 @@ export default function ContactForm() {
           id="email"
           type="email"
           name="email"
-          placeholder="Name"
+          placeholder="Email"
         />
       </div>
       <div
@@ -98,6 +112,13 @@ export default function ContactForm() {
           })}
         />
       </div>
+      {response && !response.success ? (
+        <p className={"text-center text-sm text-red-600 mt-4"}>
+          {response.message}
+        </p>
+      ) : (
+        ""
+      )}
     </form>
   );
 }

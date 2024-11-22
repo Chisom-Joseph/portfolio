@@ -2,14 +2,17 @@
 import sendContactEmail from "@/mails/contact.mail";
 
 export default async function submitContactForm(formData: FormData) {
-  return {
-    success: true,
-    message: "Form submitted successfully",
-  };
-
   const name = formData.get("name");
   const email = formData.get("email");
   const message = formData.get("message");
+
+  // Validate form fields
+  if (!name || !email || !message) {
+    return {
+      success: false,
+      message: "All fields are required to proceed",
+    };
+  }
 
   // Add to sheet
   const body = {
