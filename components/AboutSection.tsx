@@ -11,6 +11,7 @@ export default function AboutSection() {
       <Wrapper>
         <h1
           data-aos="fade-down"
+          data-aos-offset="50"
           className="aboutTitle m-auto mb-[0.5em] mt-[0.2em] w-fit font-powerGroteskUltraBold text-[3em] leading-[0.9em] md:text-[4em] md:leading-[1em]"
         >
           About Me
@@ -18,6 +19,7 @@ export default function AboutSection() {
 
         <p
           data-aos="fade-up"
+          data-aos-offset="50"
           data-aos-duration="5000"
           className="m-auto mb-[2.5em] scale-0 text-center leading-loose tracking-wider text-body opacity-0 transition-all"
         >
