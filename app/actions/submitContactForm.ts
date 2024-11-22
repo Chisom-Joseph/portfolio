@@ -2,6 +2,11 @@
 import sendContactEmail from "@/mails/contact.mail";
 
 export default async function submitContactForm(formData: FormData) {
+  return {
+    success: true,
+    message: "Form submitted successfully",
+  };
+
   const name = formData.get("name");
   const email = formData.get("email");
   const message = formData.get("message");

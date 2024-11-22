@@ -5,11 +5,14 @@ import "./globals.css";
 import BackgroundOverlay from "@/components/BackgroundOverlay";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
-import { AOSProvider } from "@/providers/AOSprovider";
+import AOSProvider from "@/providers/AOSprovider";
 import DeviceInfoLogger from "@/components/DeviceInfoLogger";
+const AnimatedModal = dynamic(() => import("@/components/ui/custom/Modal"), {
+  ssr: false,
+});
 
 import Header from "@/components/Header";
-const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
+import Footer from "@/components/Footer";
 
 const powerGroteskUltraBold = localFont({
   src: "./fonts/PowerGrotesk-UltraBold.woff2",
@@ -37,9 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
+        className={`overflow-x-hidden font-figtree antialiased bg-white dark:bg-darkPurple text-darkPurple dark:text-white ${powerGroteskUltraBold.variable} ${figtree.variable} ${figtreeItalic.variable}`}
       >
         <ThemeProvider>
           <AOSProvider>
@@ -51,6 +54,7 @@ export default function RootLayout({
             </ActiveNavProvider>
           </AOSProvider>
         </ThemeProvider>
+        {/* <AnimatedModal /> */}
       </body>
       <DeviceInfoLogger />
     </html>

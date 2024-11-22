@@ -12,7 +12,11 @@ export default function Footer() {
   const updateActiveSection = activeNavContext?.updateActiveSection;
 
   return (
-    <footer data-aos="zoom-in-up" data-aos-offset="50" className="mb-16">
+    <footer
+      data-aos="zoom-in-up"
+      data-aos-offset="50"
+      className="mb-16 overflow-x-hidden scrollbar-none"
+    >
       <Wrapper className="flex items-center justify-between border-body gap-2 md:gap-[3em] border-t-[1px] pt-5">
         <div className="flex flex-1 flex-wrap items-center justify-center cmd:justify-between gap-7">
           <p

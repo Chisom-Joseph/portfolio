@@ -25,7 +25,10 @@ export default function SkillsSection() {
   }, [activeSkill]);
 
   return (
-    <Section id="skills" className="mb-[8em] scroll-m-12">
+    <Section
+      id="skills"
+      className="mb-[8em] scroll-m-12 overflow-x-hidden scrollbar-none"
+    >
       <Wrapper>
         <h1
           data-aos="fade-down"
