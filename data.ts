@@ -116,12 +116,12 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "Picture gallery",
+    title: "Diamond Schools web app",
     description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
+      "This is a fully functional school management system for Diamond Schools Nigeria",
     image: project1,
-    previewLink: "#",
-    githubLink: "#",
+    previewLink: "https://diamondschools.com.ng/",
+    githubLink: "https://github.com/Chisom-Joseph/diamondschools",
     category: "Web Apps",
     recent: true,
   },

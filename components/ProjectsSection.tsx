@@ -54,6 +54,8 @@ export default function ProjectsSection() {
                 title={project.title}
                 description={project.description}
                 image={project.image}
+                previewLink={project.previewLink}
+                githubLink={project.githubLink}
                 data-aos="flip-up"
                 className={`${
                   project.category === activeCategory ||

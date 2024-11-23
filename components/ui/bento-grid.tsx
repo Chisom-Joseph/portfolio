@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import ButtonOutlineCustom from "./custom/ButtonOutline";
@@ -26,12 +27,16 @@ export const BentoGridItem = ({
   title,
   description,
   image,
+  previewLink,
+  githubLink,
   ...props
 }: {
   className?: string;
   image: any;
   title: string;
   description?: string | React.ReactNode;
+  previewLink: string;
+  githubLink: string;
 }) => {
   return (
     <div
@@ -59,8 +64,18 @@ export const BentoGridItem = ({
           {description}
         </div>
         <div className="flex items-center justify-center gap-[0.7em] md:justify-start">
-          <ButtonOutlineCustom title="Live Preview" />
-          <ButtonOutlineCustom title="Github" />
+          <Link
+            href={previewLink}
+            {...(previewLink !== "#" && { target: "_blank" })}
+          >
+            <ButtonOutlineCustom title="Live Preview" />
+          </Link>
+          <Link
+            href={githubLink}
+            {...(githubLink !== "#" && { target: "_blank" })}
+          >
+            <ButtonOutlineCustom title="Github" />
+          </Link>
         </div>
       </div>
     </div>
