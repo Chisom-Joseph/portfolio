@@ -7,9 +7,6 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import AOSProvider from "@/providers/AOSprovider";
 import DeviceInfoLogger from "@/components/DeviceInfoLogger";
-const AnimatedModal = dynamic(() => import("@/components/ui/custom/Modal"), {
-  ssr: false,
-});
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -54,7 +51,6 @@ export default function RootLayout({
             </ActiveNavProvider>
           </AOSProvider>
         </ThemeProvider>
-        {/* <AnimatedModal /> */}
       </body>
       <DeviceInfoLogger />
     </html>
