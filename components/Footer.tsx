@@ -1,16 +1,8 @@
-"use client";
-import { useContext } from "react";
-import Link from "next/link";
-import { navLinks } from "@/data";
 import Wrapper from "./Wrapper";
 import { FaArrowUp } from "react-icons/fa6";
-import { ActiveNavContext } from "@/providers/ActiveNavProvider";
+import FooterNav from "@/components/FooterNav";
 
 export default function Footer() {
-  const activeNavContext = useContext(ActiveNavContext);
-  const activeSection = activeNavContext?.activeSection;
-  const updateActiveSection = activeNavContext?.updateActiveSection;
-
   return (
     <footer
       data-aos="zoom-in-up"
@@ -27,37 +19,8 @@ export default function Footer() {
           >
             &copy; 2024 Chisom Njoku Joseph, All rights reserved
           </p>
-          <nav
-            data-aos="fade-left"
-            data-aos-offset="50"
-            data-aos-duration="600"
-            className="flex flex-wrap gap-5 md:gap-[3em]"
-          >
-            {navLinks.map((navLink, index) => (
-              <Link
-                rel="noopener noreferrer"
-                prefetch={true}
-                data-aos="zoom-in"
-                data-aos-offset="50"
-                data-aos-duration="600"
-                className={`
-                hover:text-blue dark:hover:text-pink transition-all
-                ${
-                  navLink.path === (activeSection as string)
-                    ? "text-blue dark:text-pink"
-                    : ""
-                }`}
-                href={navLink.path}
-                key={index}
-                onClick={() => {
-                  if (updateActiveSection)
-                    return updateActiveSection(navLink.path);
-                }}
-              >
-                {navLink.name}
-              </Link>
-            ))}
-          </nav>
+          {/* Nav */}
+          <FooterNav />
         </div>
         <a
           data-aos="fade-left"
