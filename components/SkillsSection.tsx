@@ -3,7 +3,7 @@ import { useState, useLayoutEffect } from "react";
 import { skills } from "@/data";
 import Wrapper from "./Wrapper";
 import AOS from "aos";
-import CategoryNav from "@/components/AnimatedNav";
+import AnimatedNav from "@/components/AnimatedNav";
 import Section from "@/components/Section";
 
 export default function SkillsSection() {
@@ -37,7 +37,7 @@ export default function SkillsSection() {
           Skills
         </h1>
 
-        <CategoryNav
+        <AnimatedNav
           items={Array.from(skillCategories)}
           activeItem={activeSkill}
           onCategoryChange={setActiveSkill}
