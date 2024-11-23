@@ -1,5 +1,3 @@
-"use client";
-import { useLayoutEffect } from "react";
 import { FaDownload } from "react-icons/fa6";
 import Wrapper from "@/components/Wrapper";
 import ButtonGradient from "@/components/ui/custom/ButtonGradient";
