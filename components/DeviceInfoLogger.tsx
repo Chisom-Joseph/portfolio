@@ -1,6 +1,5 @@
 // src/components/DeviceInfoLogger.tsx
 "use client";
-
 import { useEffect } from "react";
 import getDeviceInfo from "@/utils/getDeviceInfo";
 
