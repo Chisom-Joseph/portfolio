@@ -6,7 +6,7 @@ import { projects } from "@/data";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import ButtonOutlineCustom from "./ui/custom/ButtonGradient";
 import { FaArrowRight } from "react-icons/fa6";
-import AnimatedNav from "@/components/ui/custom/AnimatedNav";
+import AnimatedNav from "@/components/AnimatedNav";
 import Section from "@/components/Section";
 
 export default function ProjectsSection() {

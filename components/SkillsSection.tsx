@@ -3,7 +3,7 @@ import { useState, useLayoutEffect } from "react";
 import { skills } from "@/data";
 import Wrapper from "./Wrapper";
 import AOS from "aos";
-import CategoryNav from "@/components/ui/custom/AnimatedNav";
+import CategoryNav from "@/components/AnimatedNav";
 import Section from "@/components/Section";
 
 export default function SkillsSection() {
