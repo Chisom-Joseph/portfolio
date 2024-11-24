@@ -32,7 +32,7 @@ export const BentoGridItem = ({
   ...props
 }: {
   className?: string;
-  image: any;
+  image: string;
   title: string;
   description?: string | React.ReactNode;
   previewLink: string;

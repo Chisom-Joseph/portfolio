@@ -6,7 +6,7 @@ import getDeviceInfo from "@/utils/getDeviceInfo";
 export default function DeviceInfoLogger() {
   useEffect(() => {
     const fetchDeviceInfo = async () => {
-      const info = await getDeviceInfo();
+      await getDeviceInfo();
     };
 
     fetchDeviceInfo();

@@ -17,13 +17,15 @@ export default function ButtonOutlineCustom({
   icon,
   className,
   disabled,
-  ...rest
 }: buttonProps) {
   return (
     <CardContainer className={clsx(className)}>
       <CardBody>
         <CardItem translateZ="50">
-          <button className="w-full flex items-center justify-center gap-[0.7em] font-bold bg-gradient border rounded-full py-[0.8em] px-[2em] cursor-pointer">
+          <button
+            disabled={disabled}
+            className="w-full flex items-center justify-center gap-[0.7em] font-bold bg-gradient border rounded-full py-[0.8em] px-[2em] cursor-pointer"
+          >
             {title}
             {icon ? icon : ""}
           </button>

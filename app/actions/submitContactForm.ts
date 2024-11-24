@@ -48,6 +48,8 @@ export default async function submitContactForm(formData: FormData) {
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   });
 
+  console.log(mailSent);
+
   return {
     success: true,
     message: "Form submitted successfully",

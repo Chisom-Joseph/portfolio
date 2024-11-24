@@ -3,7 +3,7 @@ import { FC, useRef } from "react";
 import gsap from "gsap";
 
 type AnimatedNavProps = {
-  items: any[];
+  items: string[];
   activeItem: string;
   onCategoryChange: (item: string) => void;
 };
