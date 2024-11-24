@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import ButtonOutlineCustom from "./custom/ButtonOutline";
 
@@ -32,7 +32,7 @@ export const BentoGridItem = ({
   ...props
 }: {
   className?: string;
-  image: string;
+  image: StaticImageData;
   title: string;
   description?: string | React.ReactNode;
   previewLink: string;
