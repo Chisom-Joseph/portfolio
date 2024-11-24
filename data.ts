@@ -52,7 +52,7 @@ export const projects = [
   {
     title: "Diamond Schools web app",
     description:
-      "This is a fully functional school management system for Diamond Schools Nigeria",
+      "This is a fully functional school management system for Diamond Schools Nigeria.",
     image: project1,
     previewLink: "https://diamondschools.com.ng/",
     githubLink: "https://github.com/Chisom-Joseph/diamondschools",
