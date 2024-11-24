@@ -6,6 +6,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import AOSProvider from "@/providers/AOSprovider";
 import DeviceInfoLogger from "@/components/DeviceInfoLogger";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -51,6 +52,7 @@ export default function RootLayout({
             </ActiveNavProvider>
           </AOSProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
       <DeviceInfoLogger />
     </html>
