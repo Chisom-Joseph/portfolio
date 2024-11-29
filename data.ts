@@ -254,3 +254,18 @@ export const socialHandles = [
     link: "",
   },
 ];
+
+export const defaultMetaData = {
+  title: "Portfolio | Chisom Joseph Njoku",
+  description:
+    "I am: Chisom Joseph Njoku a full-stack web developer with over 5 years of experience building scalable and dynamic web applications. My expertise spans frontend and backend technologies.",
+  url: "https://chisomnjoku.com.ng",
+  ogImages: [
+    {
+      url: "/images/ogImages/og1348x650.png",
+      width: 1348,
+      height: 650,
+      alt: "Chisom Joseph Njoku Portfolio screenshot",
+    },
+  ],
+};

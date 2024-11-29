@@ -7,6 +7,7 @@ import { ActiveNavProvider } from "@/providers/ActiveNavProvider";
 import AOSProvider from "@/providers/AOSprovider";
 import DeviceInfoLogger from "@/components/DeviceInfoLogger";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { defaultMetaData } from "@/data";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,9 +28,21 @@ const figtreeItalic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Chisom Joseph Njoku",
-  description:
-    "I am: Chisom Joseph Njoku a full-stack web developer with over 5 years of experience building scalable and dynamic web applications. My expertise spans frontend and backend technologies.",
+  title: defaultMetaData.title,
+  description: defaultMetaData.description,
+  openGraph: {
+    title: defaultMetaData.title,
+    description: defaultMetaData.description,
+    url: defaultMetaData.url,
+    images: [...defaultMetaData.ogImages],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@Chisom_Joseph_Njoku",
+    title: defaultMetaData.title,
+    description: defaultMetaData.description,
+    images: [defaultMetaData.ogImages[0]],
+  },
 };
 
 export default function RootLayout({
