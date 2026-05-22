@@ -27,8 +27,9 @@ export default function HeroSection() {
           data-aos="fade-up"
           className="text-center md:text-left m-auto mb-[2em] max-w-[23em] tracking-wider text-body md:max-w-[30em]"
         >
-          I create elegant and efficient web solutions with a focus on user
-          experience and clean code.
+          Full-Stack Engineer with 6+ years crafting scalable web apps,
+          cross-platform mobile experiences, and Web3 solutions — with a
+          passion for clean architecture and exceptional user experiences.
         </p>
         <Link
           href="#projects"

@@ -19,6 +19,16 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 
+// Advanced Stack Additions
+import { SiLaravel } from "react-icons/si";
+import { SiNestjs } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { SiFlutter } from "react-icons/si";
+import { SiSolidity } from "react-icons/si";
+import { SiSolana } from "react-icons/si";
+
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
@@ -50,63 +60,53 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "Diamond Schools web app",
+    title: "LecNote (AI Dictation Web App)",
     description:
-      "This is a fully functional school management system for Diamond Schools Nigeria.",
+      "A fully client-side AI dictation web app that transcribes audio directly in the browser using local Hugging Face Whisper AI models and saves data to IndexedDB.",
+    image: project3,
+    previewLink: "#",
+    githubLink: "https://github.com/Chisom-Joseph/lecnote",
+    category: "AI Web App",
+    recent: true,
+  },
+  {
+    title: "3D Food Visualisation App",
+    description:
+      "An immersive 3D culinary catalog built with React Three Fiber, Three.js, and GSAP, offering interactive product rendering, fluid camera animations, and custom shaders.",
+    image: project2,
+    previewLink: "#",
+    githubLink: "https://github.com/Chisom-Joseph/3d-food-app",
+    category: "3D Web App",
+    recent: true,
+  },
+  {
+    title: "Diamond Schools Suite",
+    description:
+      "An enterprise educational portal including comprehensive web systems for teachers, student dashboards, online CBT platforms, database models, and administrative controls.",
     image: project1,
     previewLink: "https://diamondschools.com.ng/",
     githubLink: "https://github.com/Chisom-Joseph/diamondschools",
-    category: "Web Apps",
+    category: "Fullstack Portal",
     recent: true,
   },
   {
-    title: "Food web app",
+    title: "Seren Space",
     description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
-    image: project2,
-    previewLink: "#",
-    githubLink: "#",
-    category: "Mobile Apps",
-    recent: true,
-  },
-  {
-    title: "X authentication pages",
-    description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
-    image: project3,
-    previewLink: "#",
-    githubLink: "#",
-    category: "Web Apps",
-    recent: true,
-  },
-  {
-    title: "Npm detail page",
-    description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
+      "A supportive mental health community portal enabling custom self-care wellness assessments and localized zip-code therapist matching systems.",
     image: project4,
-    previewLink: "#",
-    githubLink: "#",
-    category: "Web Apps",
+    previewLink: "https://github.com/Chisom-Joseph/seren-space",
+    githubLink: "https://github.com/Chisom-Joseph/seren-space",
+    category: "Web App",
     recent: true,
   },
   {
-    title: "Tiktok profile page",
+    title: "Generate Commit CLI",
     description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
+      "An interactive developer CLI tool that automates Git commit history construction with backdated metadata, custom messages, and randomized scheduling capabilities.",
     image: project5,
-    previewLink: "#",
-    githubLink: "#",
-    category: "Web Apps",
-    recent: true,
-  },
-  {
-    title: "Facebook algorithm design",
-    description:
-      "I'm Chisom Joseph Njoku, a professional full-stack web developer with over 4 years of more...",
-    image: project6,
-    previewLink: "#",
-    githubLink: "#",
-    category: "Web Apps",
+    previewLink: "https://github.com/Chisom-Joseph/generate-commit",
+    githubLink: "https://github.com/Chisom-Joseph/generate-commit",
+    category: "Developer Tool",
     recent: true,
   },
 ];
@@ -148,16 +148,6 @@ export const skills = [
     category: "Frontend",
   },
   {
-    title: "NodeJS",
-    icon: FaNodeJs,
-    category: "Backend",
-  },
-  {
-    title: "ExpressJS",
-    icon: SiExpress,
-    category: "Backend",
-  },
-  {
     title: "ReactJS",
     icon: FaReact,
     category: "Frontend",
@@ -173,14 +163,64 @@ export const skills = [
     category: "Mobile",
   },
   {
+    title: "Flutter",
+    icon: SiFlutter,
+    category: "Mobile",
+  },
+  {
+    title: "NodeJS",
+    icon: FaNodeJs,
+    category: "Backend",
+  },
+  {
+    title: "ExpressJS",
+    icon: SiExpress,
+    category: "Backend",
+  },
+  {
+    title: "NestJS",
+    icon: SiNestjs,
+    category: "Backend",
+  },
+  {
+    title: "Laravel",
+    icon: SiLaravel,
+    category: "Backend",
+  },
+  {
     title: "MySQL",
     icon: SiMysql,
+    category: "Backend",
+  },
+  {
+    title: "PostgreSQL",
+    icon: SiPostgresql,
     category: "Backend",
   },
   {
     title: "MongoDB",
     icon: SiMongodb,
     category: "Backend",
+  },
+  {
+    title: "Supabase",
+    icon: SiSupabase,
+    category: "Backend",
+  },
+  {
+    title: "Firebase",
+    icon: SiFirebase,
+    category: "Backend",
+  },
+  {
+    title: "Solidity",
+    icon: SiSolidity,
+    category: "Web3",
+  },
+  {
+    title: "Solana",
+    icon: SiSolana,
+    category: "Web3",
   },
 ];
 
@@ -251,14 +291,14 @@ export const socialHandles = [
     title: "+234(0)8058600003",
     icon: "whatsapp" as IconName,
     description: "",
-    link: "",
+    link: "https://wa.me/2348058600003",
   },
 ];
 
 export const defaultMetaData = {
   title: "Portfolio | Chisom Joseph Njoku",
   description:
-    "I am: Chisom Joseph Njoku a full-stack web developer with over 5 years of experience building scalable and dynamic web applications. My expertise spans frontend and backend technologies.",
+    "I am Chisom Joseph Njoku, a Full-Stack Web & Mobile Engineer with over 6 years of experience building scalable and dynamic web applications, cross-platform mobile apps, and Web3 solutions with clean architecture.",
   url: "https://chisomnjoku.com.ng",
   ogImages: [
     {

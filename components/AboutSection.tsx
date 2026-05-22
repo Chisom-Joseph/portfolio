@@ -21,16 +21,17 @@ export default function AboutSection() {
           data-aos-duration="5000"
           className="m-auto mb-[2.5em] scale-0 text-center leading-loose tracking-wider text-body opacity-0 transition-all"
         >
-          I&apos;m Chisom Joseph Njoku, a professional full-stack web developer
-          with over 4 years of experience. I specialize in building dynamic and
-          responsive websites and applications using HTML, CSS, JavaScript,
-          Node.js, MySQL, MongoDB, React.js, Next.js, TypeScript, and
-          TailwindCSS. With a passion for technology and a keen eye for detail,
-          I strive to create seamless user experiences and robust backend
-          systems. I am dedicated to continuous learning and staying updated
-          with the latest industry trends and best practices. When I&apos;m not
-          coding, I enjoy sharing my knowledge through educational content on
-          TikTok, targeting Nigerian programmers and tech enthusiasts.
+          I&apos;m Chisom Joseph Njoku — a Full-Stack Web &amp; Mobile Engineer
+          with over 6 years of professional experience building scalable,
+          production-grade applications. My expertise spans the modern web
+          stack: React, Next.js, TypeScript, Node.js, NestJS, and Laravel on
+          the backend, with MySQL, PostgreSQL, MongoDB, Supabase, and Firebase
+          for data. I also build cross-platform mobile apps with Flutter and
+          React Native, and I explore Web3 frontiers with Solidity and Solana.
+          I care deeply about clean architecture, performance, and
+          pixel-perfect user experiences. Beyond coding, I create educational
+          tech content on TikTok, helping Nigerian developers grow their skills
+          and break into the global tech industry.
         </p>
         <div
           data-aos="fade-up"

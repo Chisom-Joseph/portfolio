@@ -17,7 +17,7 @@ export default function Footer() {
             data-aos-duration="600"
             className="text-center"
           >
-            &copy; 2024 Chisom Njoku Joseph, All rights reserved
+            &copy; 2026 Chisom Joseph Njoku, All rights reserved
           </p>
           {/* Nav */}
           <FooterNav />
