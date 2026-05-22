@@ -100,6 +100,16 @@ export const projects = [
     recent: true,
   },
   {
+    title: "Fintech Mobile App (Trust Fix)",
+    description:
+      "A cross-platform mobile application built with Flutter/React Native, featuring secure wallet connections, biometric authentication, and seamless Web3 integrations.",
+    image: project6,
+    previewLink: "#",
+    githubLink: "https://github.com/Chisom-Joseph/trust-fix",
+    category: "Mobile",
+    recent: true,
+  },
+  {
     title: "Generate Commit CLI",
     description:
       "An interactive developer CLI tool that automates Git commit history construction with backdated metadata, custom messages, and randomized scheduling capabilities.",
