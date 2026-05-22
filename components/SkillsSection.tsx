@@ -48,20 +48,20 @@ export default function SkillsSection() {
           className="mx-auto mb-16 flex max-w-4xl flex-wrap items-center justify-center gap-6"
         >
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              data-aos="zoom-in"
-              className={`${
-                skill.category === activeSkill || activeSkill === "All"
-                  ? ""
-                  : "hidden"
-              } hover:scale-110 transition-all cursor-pointer text-body text-center`}
-            >
-              <div className="mb-4 w-fit rounded-[0.55em] border-[1px] border-body p-4 text-6xl">
-                <skill.icon />
-              </div>
-              <p>{skill.title}</p>
-            </div>
+          <div
+          key={index}
+          data-aos="zoom-in"
+          className={`${
+            skill.category === activeSkill || activeSkill === "All"
+              ? ""
+              : "hidden"
+          } hover:scale-110 transition-all cursor-pointer text-body text-center`}
+        >
+          <div className="mb-3 w-fit rounded-[0.55em] border-[1px] border-body p-3 text-4xl md:mb-4 md:p-4 md:text-6xl">
+            <skill.icon />
+          </div>
+          <p className="text-xs md:text-sm">{skill.title}</p>
+        </div>
           ))}
         </div>
       </Wrapper>

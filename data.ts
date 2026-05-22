@@ -66,7 +66,7 @@ export const projects = [
     image: project3,
     previewLink: "#",
     githubLink: "https://github.com/Chisom-Joseph/lecnote",
-    category: "AI Web App",
+    category: "Web",
     recent: true,
   },
   {
@@ -76,7 +76,7 @@ export const projects = [
     image: project2,
     previewLink: "#",
     githubLink: "https://github.com/Chisom-Joseph/3d-food-app",
-    category: "3D Web App",
+    category: "Web",
     recent: true,
   },
   {
@@ -86,7 +86,7 @@ export const projects = [
     image: project1,
     previewLink: "https://diamondschools.com.ng/",
     githubLink: "https://github.com/Chisom-Joseph/diamondschools",
-    category: "Fullstack Portal",
+    category: "Web",
     recent: true,
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     image: project4,
     previewLink: "https://github.com/Chisom-Joseph/seren-space",
     githubLink: "https://github.com/Chisom-Joseph/seren-space",
-    category: "Web App",
+    category: "Web",
     recent: true,
   },
   {

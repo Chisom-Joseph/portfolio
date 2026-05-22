@@ -36,14 +36,14 @@ const AnimatedNav: FC<AnimatedNavProps> = ({
       ref={navListRef}
       data-aos="flip-up"
       data-aos-duration="5000"
-      className="relative m-auto mb-[4em] flex max-h-[4em] w-max items-center justify-around rounded-full border-[1px] font-bold dark:bg-white/5"
+      className="relative m-auto mb-[4em] flex w-fit max-w-full items-center overflow-x-auto scrollbar-none rounded-full border-[1px] font-bold dark:bg-white/5"
     >
       {items.map((item, index) => (
         <div
           key={index}
           className={`${
             activeItem === item && "text-white"
-          } md:text-[1em] text-[0.7em] py-4 relative flex items-center px-[2em] h-full cursor-pointer transition-all duration-500 ease-in-out`}
+          } relative flex h-full shrink-0 cursor-pointer items-center px-[1.2em] py-3 text-[0.72em] transition-all duration-500 ease-in-out md:px-[2em] md:py-4 md:text-[1em]`}
           onClick={() => handleCategoryChange(item, index)}
         >
           {index === 0 && (

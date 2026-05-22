@@ -46,7 +46,7 @@ export default function ProjectsSection() {
           onCategoryChange={setActiveCategory}
         />
 
-        <div className="mx-auto mb-16 max-w-4xl" data-aos="zoom-in-up">
+        <div className="w-full mb-16" data-aos="zoom-in-up">
           <BentoGrid>
             {projects.map((project, index) => (
               <BentoGridItem
